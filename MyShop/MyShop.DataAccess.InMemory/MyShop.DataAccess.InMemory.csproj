@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Myshop.Core\Myshop.Core.csproj">
+    <ProjectReference Include="..\Myshop.Core\MyShop.Core.csproj">
       <Project>{477a34df-9ae1-43f7-8894-40ada46d58d9}</Project>
-      <Name>Myshop.Core</Name>
+      <Name>MyShop.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
