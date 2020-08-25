@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyShop.Core.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Caching;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace MyShop.DataAccess.InMemory
 {
     //put a placeholder <T> to define class as a generic
-    public class InMemoryRepository<T> where T : Myshop.Core.Models.BaseEntity
+    public class InMemoryRepository<T> : IRepository<T> where T : Myshop.Core.Models.BaseEntity
     {
         ObjectCache cache =  MemoryCache.Default;
         //createan internal list that references the placeholder
@@ -28,6 +29,7 @@ namespace MyShop.DataAccess.InMemory
         }
 
         //method that create a generic function that store our items in memory
+
         public void Commit()
         {
             cache[className] = items;
