@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 namespace Myshop.Core.Models
 {
    // public class to enable other programs and projects access its properties
-    public class Product
+   //salso implements BaseEntity 
+    public class Product : BaseEntity
     {
-        public string Id { get; set; }
+       
 
         //Data validation
         [StringLength(20)]
@@ -30,11 +31,14 @@ namespace Myshop.Core.Models
         //contains URL for our product Image
         public string Image { get; set; }
 
-        public Product()
+      /*  public Product()
         {
             //Id is created as string but generated as GUID
             this.Id = Guid.NewGuid().ToString();
         }
+
+        Getting rid of this constructor cos the Id has already been created in the BaseEntity class
+        */
         
     }
 }
