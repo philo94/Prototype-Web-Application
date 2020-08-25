@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 //Adding references
 using Myshop.Core.Models;
+using Myshop.Core.ViewModels;
 using MyShop.DataAccess.InMemory;
 
 namespace MyShop.WebUI.Controllers
@@ -14,10 +15,18 @@ namespace MyShop.WebUI.Controllers
         //Creating an instance of product repository
         ProductRepository context;
 
+        // Add the repository so that we can load the product categories from the database
+        ProductCategoryRepository ProductCategories;
+
+        //Initialize the product category
+       
+
         //constructor that initializes the repository
         public ProductManagerController()
         {
             context = new ProductRepository();
+            //Initialize the product category
+            ProductCategories = new ProductCategoryRepository();
         }
         // GET: ProductManager
         public ActionResult Index()
@@ -29,10 +38,18 @@ namespace MyShop.WebUI.Controllers
 
         //method to create a product
         //(display page to fill in product details)
-        public ActionResult Create()
+        public ActionResult Create()      
         {
-            Product product = new Product();
-            return View(product);
+            //Update the create action to return a product with a list
+            // of categories
+            //create a reference to the viewModel
+            ProductManagerViewModel viewModel = new ProductManagerViewModel();
+
+            viewModel.Product = new Product();
+            viewModel.ProductCategories = ProductCategories.Collection();
+            return View(viewModel);
+
+          
         }
 
         // Method to have the product details posted in the database
@@ -56,7 +73,7 @@ namespace MyShop.WebUI.Controllers
 
         }
 
-        // Method to load the product from database
+        // Method to load the product and product category from database
         public ActionResult Edit(string Id)
         {
             Product product = context.Find(Id);
@@ -67,7 +84,11 @@ namespace MyShop.WebUI.Controllers
             else
             {
                 //return view with the product found
-                return View(product);
+                // return viewmodel(containing the product and the list of product categories)
+                ProductManagerViewModel viewModel = new ProductManagerViewModel();
+                viewModel.Product = product;
+                viewModel.ProductCategories = ProductCategories.Collection();
+                return View(viewModel);
             }
         }
 
