@@ -1,6 +1,7 @@
 using Myshop.Core.Models;
 using MyShop.Core.Contracts;
 using MyShop.DataAccess.InMemory;
+using MyShop.DataAccess.SQL;
 using System;
 
 using Unity;
@@ -47,8 +48,9 @@ namespace MyShop.WebUI
             // container.RegisterType<IProductRepository, ProductRepository>();
 
             //Used to register the two containers
-            container.RegisterType<IRepository<Product>, InMemoryRepository<Product>>();
-            container.RegisterType<IRepository<ProductCategory>, InMemoryRepository<ProductCategory>>();
+            //Tell the WebUI to use the SQL repository instead of Inmemory Repository using dependency injection
+            container.RegisterType<IRepository<Product>, SQLRepository<Product>>();
+            container.RegisterType<IRepository<ProductCategory>, SQLRepository<ProductCategory>>();
         }
     }
 }
