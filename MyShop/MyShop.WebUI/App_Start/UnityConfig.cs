@@ -1,7 +1,9 @@
+using Myshop.Core.Contracts;
 using Myshop.Core.Models;
 using MyShop.Core.Contracts;
 using MyShop.DataAccess.InMemory;
 using MyShop.DataAccess.SQL;
+using MyShop.Services;
 using System;
 
 using Unity;
@@ -51,6 +53,9 @@ namespace MyShop.WebUI
             //Tell the WebUI to use the SQL repository instead of Inmemory Repository using dependency injection
             container.RegisterType<IRepository<Product>, SQLRepository<Product>>();
             container.RegisterType<IRepository<ProductCategory>, SQLRepository<ProductCategory>>();
+            container.RegisterType<IRepository<Basket>, SQLRepository<Basket>>();
+            container.RegisterType<IRepository<BasketItem>, SQLRepository<BasketItem>>();
+            container.RegisterType<IBasketService, BasketService>();
         }
     }
 }
