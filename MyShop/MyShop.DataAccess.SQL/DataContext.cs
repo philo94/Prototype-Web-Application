@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyShop.DataAccess.SQL
 {
-    public class DataContext :DbContext //contains all the base methods and actions for our DataContext to work
+    public class DataContext : DbContext //contains all the base methods and actions for our DataContext to work
     {
         public DataContext()
             : base("DefaultConnection") //calls the default connection within the connection string of Web.config OR App.config file
@@ -18,6 +18,8 @@ namespace MyShop.DataAccess.SQL
 
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<Basket>Baskets{get; set;}
+        public DbSet<BasketItem> BasketItems { get; set; }
 
     }
 }
