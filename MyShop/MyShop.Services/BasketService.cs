@@ -168,6 +168,13 @@ namespace MyShop.Services
             }
         }
 
+        //Method that clears the basket down
+        public void ClearBasket(HttpContextBase httpContext)
+        {
+            Basket basket = GetBasket(httpContext, false);
+            basket.BasketItems.Clear();
+            basketContext.Commit();
+        }
 
 
             
