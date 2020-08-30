@@ -8,10 +8,11 @@ using System.Web.Mvc;
 using Myshop.Core.Models;
 using Myshop.Core.ViewModels;
 using MyShop.Core.Contracts;
-using MyShop.DataAccess.InMemory;
+
 
 namespace MyShop.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProductManagerController : Controller
     {
         //Creating an instance of IRepository

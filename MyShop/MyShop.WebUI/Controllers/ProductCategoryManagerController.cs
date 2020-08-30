@@ -1,6 +1,6 @@
 ﻿using Myshop.Core.Models;
 using MyShop.Core.Contracts;
-using MyShop.DataAccess.InMemory;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace MyShop.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProductCategoryManagerController : Controller
     {
         //Creating an instance of product Category repository

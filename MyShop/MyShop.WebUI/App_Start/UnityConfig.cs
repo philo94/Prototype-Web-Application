@@ -1,7 +1,6 @@
 using Myshop.Core.Contracts;
 using Myshop.Core.Models;
 using MyShop.Core.Contracts;
-using MyShop.DataAccess.InMemory;
 using MyShop.DataAccess.SQL;
 using MyShop.Services;
 using System;

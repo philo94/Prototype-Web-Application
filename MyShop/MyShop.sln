@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop.Services", "MyShop.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop.DataAccess.SQL", "MyShop.DataAccess.SQL\MyShop.DataAccess.SQL.csproj", "{617BAF93-6F7F-4914-8F28-90A7751010DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop.DataAccess.InMemory", "MyShop.DataAccess.InMemory\MyShop.DataAccess.InMemory.csproj", "{9572ED56-E479-416A-868B-923AF51F683A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop.WebUI", "MyShop.WebUI\MyShop.WebUI.csproj", "{844174B7-F5DD-458D-9C5B-919B013897DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShop.WebUI.Tests", "MyShop.WebUI.Tests\MyShop.WebUI.Tests.csproj", "{0765EBA5-1D70-4D9D-966E-2F6EE116100A}"
@@ -33,10 +31,6 @@ Global
 		{617BAF93-6F7F-4914-8F28-90A7751010DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{617BAF93-6F7F-4914-8F28-90A7751010DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{617BAF93-6F7F-4914-8F28-90A7751010DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9572ED56-E479-416A-868B-923AF51F683A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9572ED56-E479-416A-868B-923AF51F683A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9572ED56-E479-416A-868B-923AF51F683A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9572ED56-E479-416A-868B-923AF51F683A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{844174B7-F5DD-458D-9C5B-919B013897DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{844174B7-F5DD-458D-9C5B-919B013897DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{844174B7-F5DD-458D-9C5B-919B013897DD}.Release|Any CPU.ActiveCfg = Release|Any CPU

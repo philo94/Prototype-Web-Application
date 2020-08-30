@@ -99,6 +99,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
@@ -395,10 +396,6 @@
     <ProjectReference Include="..\Myshop.Core\MyShop.Core.csproj">
       <Project>{477a34df-9ae1-43f7-8894-40ada46d58d9}</Project>
       <Name>MyShop.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MyShop.DataAccess.InMemory\MyShop.DataAccess.InMemory.csproj">
-      <Project>{9572ed56-e479-416a-868b-923af51f683a}</Project>
-      <Name>MyShop.DataAccess.InMemory</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyShop.DataAccess.SQL\MyShop.DataAccess.SQL.csproj">
       <Project>{617baf93-6f7f-4914-8f28-90a7751010dd}</Project>
