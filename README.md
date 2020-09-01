@@ -1,5 +1,7 @@
 # Prototype-Web-Application
 E-commerce website demo
+Student Name: Eze Philip
+Student Number: 17393140
 
 			DESCRIPTION
 
